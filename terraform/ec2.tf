@@ -45,8 +45,8 @@ resource "aws_security_group" "allow_user_to_connect" {
 
   ingress {
     description = "Kubernetes Node Ports"
-    from_port   = 30000 - 32767
-    to_port     = 30000 - 32767
+    from_port   = 30000-32767
+    to_port     = 30000-32767
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
@@ -69,8 +69,8 @@ resource "aws_security_group" "allow_user_to_connect" {
 
   ingress {
     description = "app"
-    from_port   = 3000 - 10000
-    to_port     = 3000 - 10000
+    from_port   = 3000-10000
+    to_port     = 3000-10000
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
